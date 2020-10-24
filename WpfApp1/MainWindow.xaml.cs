@@ -20,6 +20,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        AuthorizationС authorization = new AuthorizationС();
         public MainWindow()
         {
             InitializeComponent();
@@ -27,8 +28,18 @@ namespace WpfApp1
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Login login = new Login();
-            login.Show();
+            if (authorization.SearchForUsers(tbLogin.Text, tbPassword.Text))
+                lblResultAuthorization.Content = authorization.getName;
+            else
+                lblResultAuthorization.Content = "Пользователь не найден \nПроверьте логин или пароль ";
+            //Login login = new Login();
+            //login.Show();
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrationWindow registrationWindow = new RegistrationWindow();
+            registrationWindow.Show();
         }
     }
 }

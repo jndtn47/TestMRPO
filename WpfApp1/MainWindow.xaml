@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBox x:Name="tbLogin" HorizontalAlignment="Left" Height="23" Margin="186,98,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.495,-1.812"/>
-        <TextBox x:Name="tbPassword" HorizontalAlignment="Left" Height="23" Margin="186,145,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Авторизация" HorizontalAlignment="Left" Margin="186,192,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.459,-3.618" Click="button_Click"/>
-        <Button x:Name="button1" Content="Регистрация" HorizontalAlignment="Left" Margin="283,192,0,0" VerticalAlignment="Top" Width="75"/>
+        Title="Авторизация" Height="214.5" Width="318.5">
+    <Grid Height="180" VerticalAlignment="Top">
+        <TextBox x:Name="tbLogin" HorizontalAlignment="Left" Height="24" Margin="26,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.495,-1.812"/>
+        <TextBox x:Name="tbPassword" HorizontalAlignment="Left" Height="23" Margin="165,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAuthorization" Content="Авторизация" HorizontalAlignment="Left" Margin="210,102,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.459,-3.618" Click="button_Click"/>
+        <Button x:Name="btnRegistration" Content="Регистрация" HorizontalAlignment="Left" Margin="210,127,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+        <Label x:Name="lblLogin" Content="Логин:" HorizontalAlignment="Left" Margin="26,23,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPassword" Content="Пароль:" HorizontalAlignment="Left" Margin="165,23,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblResultAuthorization" Content="" HorizontalAlignment="Left" Margin="42,102,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
